@@ -62,7 +62,7 @@ const buscaPizza = (value) => pizzas.find((pizza) => pizza.id === value)
 
 let listado = JSON.parse(localStorage.getItem("listado")) || [];
 
-const saveLocalStorage = () => {
+const saveLocalStorage = (listado) => {
   localStorage.setItem("listado", JSON.stringify(listado));
 };
 
