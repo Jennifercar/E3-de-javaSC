@@ -62,47 +62,46 @@ const buscaPizza = (value) => pizzas.find((pizza) => pizza.id === value)
 
 let listado = JSON.parse(localStorage.getItem("listado")) || [];
 
-const saveLocalStorage = (listPizzas) => {
-  localStorage.setItem("listado", JSON.stringify(listPizzas));
+const saveLocalStorage = () => {
+  localStorage.setItem("listado", JSON.stringify(listado));
 };
 
 
 
 const renderBusqueda = (pizza) => {
-    if (pizza) {
-		conteiner.innerHTML = `
+    return `
       <div class="card" >
       <h2 class="cardTipo">${pizza.tipo}</h2>
       <h3 > Precio: $${pizza.precio} </h3>
-      <h3 > Ingredientes: ${pizza.ingredientes} </h3>
+      <h3 > Ingredientes: ${pizza.ingredientes.map((i)=>i).join(", ")} </h3>
 	  <img src= "${pizza.imagen} "/>
           </div>
       `
-    }
+    
 	//width="50" height="50"
 };
 
-const renderLista = (listPizzas) => {
-    conteiner.innerHTML = listPizzas.map((pizza) => renderBusqueda(pizza)).join("");
+const renderLista = (listado) => {
+    conteiner.innerHTML = listado.map((pizza) => renderBusqueda(pizza)).join("");
   };
 
 const submitSearch = (e) => {
     e.preventDefault()
 	const searchValue = input_number.value;
     if (!searchValue || searchValue == "") 
-     return console.log ("Ingrese un numero del 1 al 6");
-     console.log(listado);
-     renderLista();
-    const searchedPizza = buscaPizza(parseInt(searchValue));
-	console.log(searchedPizza);
-	saveLocalStorage();
-    renderBusqueda(searchedPizza);
+     return 
+	
+    const searchedPizza = buscaPizza(Number(searchValue));
+
+	listado=[searchedPizza];
+	saveLocalStorage(listado);
+    renderLista(listado);
 	
     
 };
 
 const init = () => {
-    renderLista(listPizzas);
+    renderLista(listado);
 
 
 form.addEventListener("submit", submitSearch)
