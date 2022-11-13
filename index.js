@@ -81,8 +81,8 @@ const renderBusqueda = (pizza) => {
 	//width="50" height="50"
 };
 
-const renderLista = (listado) => {
-    conteiner.innerHTML = listado.map((pizza) => renderBusqueda(pizza)).join("");
+const renderLista = (listPizzas) => {
+    conteiner.innerHTML = listPizzas.map((pizza) => renderBusqueda(pizza)).join("");
   };
 
 const submitSearch = (e) => {
