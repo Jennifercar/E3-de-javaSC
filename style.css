@@ -1,11 +1,84 @@
-.card{
-    color: brown;
+#form {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url(https://www.naturgy.com/filesImagesCOM/energia_servicio_humanidad_fuego.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-  
-};
+    align-items: center;
+    justify-content: space-between;
 
+}
+
+.tituloForm{
+    width: 100%;
+    height: 30%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f3dcdc;
+  
+
+}
+
+
+#input-number{
+   
+    width: 500px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    text-shadow: 0 0 2px rgb(36, 17, 17);
+    color: rgb(26, 21, 21);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 11px;
+}
+
+#input-buton{
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    text-shadow: 0 0 2px rgb(36, 17, 17);
+    color: rgb(26, 21, 21);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+.imagen{
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+}
+.card{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+
+}
 .cardTipo{
-    color: brown;
-};
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+}
+.cardPrecioIng{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}

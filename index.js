@@ -1,47 +1,47 @@
 const pizzas =  [
     {   
 	    id: 1 ,
-		tipo: "caprese",
+		tipo: "Caprese",
 		ingredientes: ["tomate", "albaca"],
 		precio: 1500,
-		imagen:  ['./img/capress.jpg'],
+		imagen:  ['./img/capress.jpg '],
 	},
 	{   
 	    id: 2 ,
-		tipo: "jyq",
+		tipo: "Jyq",
 		ingredientes: ["jamon","queso"],
 		precio: 1200,
 		imagen:  ['./img/jamonqueso.jpg'],
 	},
 	{   
 	    id: 3 ,
-		tipo: "anchoas",
+		tipo: "Anchoas",
 		ingredientes: ["anchoas","anchoas" , "morron"],
 		precio: 1800,
 		imagen:  ['./img/anchoas.jpg'],
 	},
 	{   
 	    id: 4 ,
-		tipo: "muzza",
-		ingredientes: ["anchoas","anchoas" , "morron"],
+		tipo: "Muzza",
+		ingredientes: ["anchoas","aceitunas" , "morron"],
 		precio: 1800,
 		imagen:  ['./img/pizza-muzzarella-muzza.jpg'],
 	},
 	{   
 	    id: 5 ,
-		tipo: "especial",
+		tipo: "Especial",
 		ingredientes: ["pollo", "salsa de tomate" , "muzarella"],
 		precio: 1200,
-		imagen:  ['./img/.jpg'],
+		imagen:  ['./img/pollo.jpg'],
 		
 		
 	},
 	{   
 	    id: 6 ,
-		tipo: "humita",
+		tipo: "Humita",
 		ingredientes: ["humita","cebolla", "choclo" , "muzarela"],
 		precio: 1500,
-		imagen:  ['./img/car.jpg'],
+		imagen:  ['./img/humita.jpg'],
 	},
 ]
 
@@ -72,9 +72,9 @@ const renderBusqueda = (pizza) => {
     return `
       <div class="card" >
       <h2 class="cardTipo">${pizza.tipo}</h2>
-      <h3 > Precio: $${pizza.precio} </h3>
-      <h3 > Ingredientes: ${pizza.ingredientes.map((i)=>i).join(", ")} </h3>
-	  <img src= "${pizza.imagen} "/>
+      <h3 class="cardPrecioIng" > Precio: $${pizza.precio} </h3>
+      <h3 class="cardPrecioIng"> Ingredientes: ${pizza.ingredientes} </h3>
+	  <img class="imagen" src= "${pizza.imagen} "/>
           </div>
       `
     
