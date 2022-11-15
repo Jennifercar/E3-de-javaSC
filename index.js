@@ -85,11 +85,37 @@ const renderLista = (listPizzas) => {
     conteiner.innerHTML = listPizzas.map((pizza) => renderBusqueda(pizza)).join("");
   };
 
+const showEmptyError = () => {
+	conteiner.innerHTML = ` 
+	<div >
+	<h2 class="cardPrecioIng"> Ingresa un número del 1 al 6 y mirá la magia </h2>
+	</div>
+	` 
+
+};
+
+const errorDeId = (pizzas) => {
+	if (!pizzas){ 
+	conteiner.innerHTML = ` 
+	<div >
+	<h2 class="cardPrecioIng"> No existe una pizza con ese Id ingresado </h2>
+	</div>
+	` 
+}
+};
+
+
 const submitSearch = (e) => {
     e.preventDefault()
 	const searchValue = input_number.value;
     if (!searchValue || searchValue == "") 
+	if (!searchValue) {
+        showEmptyError(searchValue);
+	}else{ (!pizzas) 
+			errorDeId(pizzas);
      return 
+	
+}
 	
     const searchedPizza = buscaPizza(Number(searchValue));
 
